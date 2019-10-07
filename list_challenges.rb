@@ -199,21 +199,7 @@ end
 def merge(a, b)
   c = a + b
 
-  variable = true
-  time = c.size - 1
-  temp = 0
-  while variable == true
-    variable = false
-    time.size.times do |i|
-      if c[i] > c[i + 1]
-        temp = c[i]
-        c[i] = c[i + 1]
-        c[i + 1] = temp
-        variable = true
-      end
-    end
-  end
-  return c
+  return c.sort
 end
 
 # puts merge([1, 2, 5, 4], [2, 2, 3, 5])
